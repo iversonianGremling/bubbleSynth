@@ -1,0 +1,10 @@
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\clipboard_win-0bf60f3806856fb7.rmeta: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\lib.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\formats.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\raw.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\dib.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\image.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\utils.rs
+
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\clipboard_win-0bf60f3806856fb7.d: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\lib.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\formats.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\raw.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\dib.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\image.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\utils.rs
+
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\lib.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\formats.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\raw.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\dib.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\image.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\clipboard-win-3.1.1\src\utils.rs:

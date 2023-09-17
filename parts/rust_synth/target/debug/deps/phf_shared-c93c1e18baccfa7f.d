@@ -1,0 +1,7 @@
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\phf_shared-c93c1e18baccfa7f.rmeta: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf_shared-0.10.0\src/lib.rs
+
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\libphf_shared-c93c1e18baccfa7f.rlib: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf_shared-0.10.0\src/lib.rs
+
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\phf_shared-c93c1e18baccfa7f.d: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf_shared-0.10.0\src/lib.rs
+
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\phf_shared-0.10.0\src/lib.rs:

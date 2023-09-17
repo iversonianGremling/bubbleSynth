@@ -1,0 +1,23 @@
+input: Vec["<portname> <portname>"]
+
+input<Vec<String>> -> split_string() -> connections<Pair(string, string)> -> graph_of_ids<diGraphMap>
+ //NOTE: ??1 represents an unknown data structure that allows to store different types and access them and access them by a known ID
+ //NOTE: module = audioModule
+graph_of_ids<diGraphMap> -> find_existing_modules_on_graph()<Vec[ID]/*string?*/> -> allocate_modules_on_heap()<??1> -> order_modules()<??1> -> ordered_heap_allocated_audiomodules<??1>
+
+ordered_heap_allocated_audiomodules<??1[AudioModules]> -> {
+   if graph_of_ids<diGraphMap> -> module_has_mods<Bool> {
+      graph_of_ids<diGraphMap> + audiomodule_results<Vec<f32>>/*still not full with all the results but should have necessary info bc they tick in order*/
+      -> find_results_of_modulators_that_moulate_this_audioModule()<Vec<f32>> -> modulator_results<Vec<f32>>
+      modulator_results<Vec[f32]> -> {
+         for each modified_audiomodule_param {audiomodule_param_value<f32> += modulator_result<f32> //if it's frequency use log scale and other considerations
+            audiomodule_param_value<f32> -> modified_params<Vec<f32>>}
+      }
+      modified_params<f32> + module_params<Vec<f32>> + audioModule -> tick() -> audiomodule_result<f32>
+      audiomodule_result<f32> -> audiomodule_results<Vec<f32>>
+   } else {
+      module_params<f32> + audioModule-> tick() -> audiomodule_result<f32> -> audiomodule_results<Vec<f32>>
+   }
+} -> audiomodule_results<Vec<f32>> -> take_the_ones_that_go_to_output()<Vec<f32>> -> mixer()<f32> -> output<f32>
+
+

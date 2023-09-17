@@ -1,0 +1,11 @@
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\bitflags-48f69cc2b47681bb.rmeta: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\lib.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\iter.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\parser.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\traits.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\public.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\internal.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\external.rs
+
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\bitflags-48f69cc2b47681bb.d: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\lib.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\iter.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\parser.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\traits.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\public.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\internal.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\external.rs
+
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\lib.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\iter.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\parser.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\traits.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\public.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\internal.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bitflags-2.3.3\src\external.rs:

@@ -1,0 +1,9 @@
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\accesskit_consumer-c5c37ace9f03c574.rmeta: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\lib.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\tree.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\node.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\iterators.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\text.rs
+
+E:\workspaces\_project\parts\rust_synth\target\debug\deps\accesskit_consumer-c5c37ace9f03c574.d: C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\lib.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\tree.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\node.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\iterators.rs C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\text.rs
+
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\lib.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\tree.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\node.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\iterators.rs:
+C:\Users\PRIMUX\.cargo\registry\src\index.crates.io-6f17d22bba15001f\accesskit_consumer-0.15.1\src\text.rs:

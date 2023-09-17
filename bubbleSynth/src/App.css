@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.circle {
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  border-radius: 50%;
+  background-color: #f2f2f2; /* Adjust the background color as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 80%; /* Adjust the size of the image relative to the parent div */
+  height: auto;
+  border-radius: 50%;
+}
+
+.remove-bubble {
+  position: absolute;
+  top: 10px;
+  right: 1000px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cursorFollow{
+  position: absolute;
+  width: 20px; /* Adjust the width and height as per your requirements */
+  height: 20px;
+  background-color: #f0f0f0; /* Set the background color of the circle */
+  border-radius: 50%; /* Make the div a perfect circle by setting the border-radius to 50% */
+  visibility: hidden;
+}

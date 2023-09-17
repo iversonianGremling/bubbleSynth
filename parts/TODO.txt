@@ -1,0 +1,3 @@
+-Hacer una app bubble menu que cuando se haga click despliegue un menú animado y ponga en su sitio un módulo a elegir
+-Hacer una app que muestre un módulo en el que al hacer click se desplieguen diferentes parámetros
+-Hacer una navbar sencilla con routing que "salga de arriba" al acercar el ratón

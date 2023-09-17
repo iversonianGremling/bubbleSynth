@@ -1,0 +1,25 @@
+Tbh an org file would be better but here goes nothing:
+
+1 - Implement antialliasing oscillators (polyblep)
+2 - Create "knobs" for parameters in react
+2.5 - Make the sockets work as initially intended
+3 - Polish the look and feel of the UI (pretty ugly atm)
+4 - Implement a resynthesis algorithm for the Sampler so pitch shifting can occur
+5 - Load the samples from a database
+6 - Create a step sequencer
+7 - Create a UI for the step sequencer
+8 - Use the graph to determine which thread to use
+9 - Find something that can actually implement multithreading and is somewhat dangerous (for practice reasons) (convolution perhaps?)
+10 - Implement some basic effects: flanger, phaser, chorus, delay, reverb and waveshaping
+
+
+Optional
+* - Granular Sytnhesis
+* - Moar resynthesis algorithms
+* - Waveguides
+* - Even cooler interface
+* - Phase Vocoder
+* - More synthesis methods (i.e. additive) with their respective modules
+* - Add chaotic systems as modulators
+* - Analog modelling?
+* - Convolution reverb

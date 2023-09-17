@@ -1,0 +1,31 @@
+
+.content {
+    background-color: #262a2d;
+    child-space: 1s;
+    col-between: 1s;
+}
+
+.control {
+    width: auto;
+    height: auto;
+    child-space: 1s;
+    row-between: 8px;
+}
+
+knob {
+    width: 76px;
+    height: 76px;
+    background-color: #262a2d;
+    border-radius: 50%;
+}
+
+knob .track {
+    background-color: #ffb74d;
+}
+
+label {
+    color: white;
+    width: 100px;
+    height: 24px;
+    child-space: 1s;
+}

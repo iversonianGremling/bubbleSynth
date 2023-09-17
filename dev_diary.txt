@@ -1,0 +1,181 @@
+
+
+Dev diary:
+NOTE: I'm going to cut some things out that are just ranting/depression mumbling bc... well, no one wants to see that, not bc I'm ashamed but bc it's going to be depressing, I wasn't going through an specially good time back then.
+
+(1/6/23) ATM this is, at best, a try of simple frontend tricks for displaying stuff using tauri
+
+(2/6/23) Annoying day, tryied to implement a function to delete the bubbles but I ended up restructuring the whole project, still errors to solve, doesn't compile, I'm tired, better leave it for tomorrow
+
+(3/6/23) Solved an infinite rerender problem but now nothing is displayed and I have no idea why, I think it's better to start the frontend from scratch, it's poorly structured and it shows when you read the code that everything is a mess and that I didn't fully understand how react worked when I started the project. Time to start from zero
+
+(5/6/23) After a well deserved rest I've finally managed to get a satisfactory UI behaviour (ty chatGPT), it still needs polish but it's outstanding how much progress I made today, and using a lot less time than with the rest of the days. Want to polish some things, maybe that's better for tomorrow.
+
+(7/6/23) Things start to get going, made a socket system without logic yet, have to make it so different elements have different socket layouts but it's going to be easy
+
+(8/6/23) Made images undraggable so dragable works as expected, it's 2AM so I'll probably do more things in the morning. Tried to implement a system of cables (basically Lines) with konva without much success, I'll check out how it works and come back later. I've made chatGPT make a react program that draws line exactly how I want, I have to translate that to the code of the program.
+
+(9/6/23) Looks like I have to use Konva + Spring to get the desired effect with the "cables", I have to translate the whole code inside the return of App.tsx to something that Konva can understand. Have to rewrite the whole return statement from scratch, Idk if I can use react modules inside Konva or how to do it but better leave it for later when I refactor the whole code, now it's more or less 400 lines. At least I know that I don't need more tools atm for the frontend, have to check how spring works so I don't have to rewrite the whole code again. I want to start with the backend asap so I'll leave the animations and putting the thing "pretty" for later.
+
+(9/6/23 (later)) Ok, looks like spring would made me rewrite my whole code again, better do it in one sit. It's going to be a heavy load of work, I expect to have something functional in around 5-7 days
+
+(9/6/23 (later)) So... Konva doesn't work, a whole day spent with an outdated tool that isn't worth my time, going to do svg stuff to draw the lines, fuck it.
+
+(11/6/23 (Sunday 4AM)) Finally found a way to draw lines, svg, with a particular property in styles it allows me to draw lines without preventing onClick events and similar, it still doesn't work as intended but it seems that I'm near to make it work out, after that it's just putting more sockets and recording the information about the connected modules, animations should come after. Seems like it's not that hard to solve so I guess that before the 16th of this month something cool might happen on the frontend, that if animations work, if I don't find success with spring I'll stick to plain css and do the animations there. I tended to value reliability and simplicity of the tools that I use but now that value has increased exponentially. I predict that at most at the end of july I'll have a proper frontend (with maybe a few tweaks needed), that if summer plans don't get in the way hehe. I'll take a rest tomorrow or do very few things and start again with strength on monday, let's just hope that the gym doesn't eat a lot of my time, maybe a schedule would make it simpler? I'm not a schedule fan but maybe something to orient myself.
+
+(11/6/23 (evening)) SVG seems to have problems drawing lines so I'm going to move to canvas, srsly why is something that trivial as connecting elements with elements so hard? I'll try again tomorrow
+
+(11/6/23 (night)) Fucking cables, I'm doing this commit just to complain. I've been trying to do it again without success and reddit isn't helping. Fucking shit.
+
+(12/6/23 (early morning)) Found react-xarrow for solving my problem. I tried it today, it fucking works, now I can keep programming
+
+(12/6/23 (evening)) refactored some code to make it easier to manage react-xarrow, it makes me happy to see a cleaner code and not the 400 lines of mess that it was before
+
+(13/6/23 (evening)) Guess what? Couldn't make it to work, I tried to pass the reference to the object of Socket from itself up to App.tsx, trying an id system rn. Feeling kinda depressed. I'm starting to hate react and the lack of interactivity that I can have with the virtual DOM, it should be a lot easier to do stuff directly to it but no, hookshookshooks and hacks. Going to try an ID system and if that doesn't work I don't know what to do. What's the point of making a library exclusively declarative if it's just going to make it harder? Isn't the point of declarative programming to forget about the details and just focus on functions/algorithms? I swear to god if I'm presented with an alternative between this and any other framework I'll choose the latter, seems like react is going to die in the next 5 years anyway so... who cares. I'm going to end up hating web programming, you know what? fuck frameworks, even if they are good. My next web project is going to use clojurescript or elm, they look like more serious languages.
+
+I'm seriously thinking about switching to another framework. It seems that I'm forcing react to do something that it wasn't designed for and I don't know it that deeply. Let's see what tomorrow brings.
+
+(14/6/23 (early morning)) I think I'm going to give svg another chance, no ID system, no more passing reference through layers of react components, no bullshit, just plain svg, probably is going to be better documented than the rest of them anyway.
+
+(14/6/23) I can't believe I'm writing this but finally I've been able to draw ONE cable with svg, I still have to make it track an element, probably through a ref, the same problem that I couldn't solve before, I'm happy that after all this time I've accomplished this tho and I feel excited again for the project.
+
+(14/6/23) I created an array of refs, at last I'm being productive. I don't know yet how to add onClick effects to elements to notify me, maybe I can use one of those libraries once I get everything going with minimal tools.
+
+(15/6/23) As much as I hate js it has saved me this time, now I'm able to know which socket is being clicked and where the bubbles are being dragged when moved, console.logged the whole thing. Really excited to get this going, still have to change it works with multiple sockets but it isn't going to be that hard I think.
+
+(16/6/23) It looks like react doesn't like very much my method, it's contantly complaining about functions not existing, I'll solve it tommorrow. At least I could add a system of connecting sockets by references and for a minute react glitched and let me actually use it which was cool. I hope I get this solved by the end of the week, even if I have plans.
+
+(16/6/23) I'm exhausted, I feel like I have to wrestle against react and js to do what I want to do, it's like if there was some kind of barrier preventing me from creating the behaviour that I want to create. I can't stpo thinking about how easy it'd be to design a graphical programming language in a lower level language or a functional language or a language that is made for something other than building shitty enterprise apps that react to my balls being smashed against the keyboard. () this fucking thing has trapped me like some kind of drug, it's almost 6AM (). Jesus christ I should really take my mental health more seriously, this is killing me, I'm not taking breaks, just the necessary ones to keep myself going with this project as if it was everything that gave meaning to my life, I'm self aware enough to know that this is bullshit and that I should do something else or take a longer break () I'm going to take a break. Just relax for a few days without any projects in mind, just enjoying my time () in the end I love writting, even if I'm a little bit bleak sometimes it relaxes me and helps to put things into perspective. Tomorrow I'll do nothing, I'll just have fun and do some housework, maybe going to the gym if I have time, whatever my body tells me.
+
+LOL I've just seen the documentation of react-xarrows and it'd be ridiculously easy to use. I'm taking my well deserved break anyway :)
+
+(16/06/23 (evening)) Decided to take a completely different approach, not more bubbles, I'm going to opt for a more straight up approach with 4 divs in column. Leaving this here for the record. Not more commits after this point. Going to put this in private.
+
+(05/07/23) Had to remake the project again but now it seems to be going fine, I decided to make different projects for each individual functionality to make it easier to develop (seriously react is incredibly annoying to scale) had some animations going, ended up making xarrows finally work and things are looking good. I have almost all of the parts ready, I think that in two days all the basic stuff is going to be covered, can't wait to start working on the backend. The only missing thing is the behaviour when one clicks on a bubble, when that happens several small circles appear around it, each one representing a parameter, have to include a socket for each one and that should be it, I'd also like to find a way to edit the innerHTML in react but there are examples out there. The rest should be polishing but I'll leave that for after the backend is ready.
+
+(8/06/23) AT LAST! I thought this day would never come. I have a very eary prototype that will allow me to work in the backend and see the results. I'm really happy, going to upload it asap.
+
+(2023-07-21) Started learning a lot of rust, done almost all of the rustlings, I understand most of the book... the plan now is to write a rust library and synthesize the audio inside react, I have a "part" for that that should do the trick so maybe I don't even need to create a testing environment on rust, although that seems to be the safest option it's also the hardest one
+
+(31/07/23) After all of this it turns out that tauri doesn't work for this purpose. It's a shame. I'll probably try to move the react code to wasm or do another project. This wasn't intended to be a serious project anyway so, yeah. Here's a conversation with someone that knows a lot more than me:
+
+
+<velascou> Hello, I'm building a web synthesizer using rust as backend. At first I tried using tauri but it had problems with AudioWorkletProcessor so I had to stop using it. I've considered moving to wasm or something similar. Basically I want to create an app that uses react as a frontend for the UI and rust to handle the DSP. I was told in the #react channel that maybe you could help
+
+<velascou> Basically what's left is connecting rust to react and send audio to it
+
+<velascou> Ty in advance
+
+<velascou> So far I've been able to create custom AudioWorkletProcessors but no luck connecting them to tauri
+
+<> hey
+
+<> what's the problem with tauri? doesn't it support AudioWorklets?
+
+<velascou> I think it doesn't, at least custom ones with react
+
+<velascou> you have to do a weird hack and put them into the public folder and no matter what tauri can't reach those
+
+<velascou> I'm still pretty new with webdev
+
+<> so the synth runs natively or in wasm?
+
+<> there are a couple here https://github.com/search?q=tauri+synth&type=repositories&repo=&langOverride=&start_value=1
+
+<> idk if you want it to run completely in the browser then you need to compile the synth to wasm and load it in an AudioWorklet with some kind of
+bridge api, if you want to use only the web for the ui, then that's a different path, you'd just use messages from the ui or whatever tauri offers to talk to the rust backend
+
+<velascou> lol mine is there, I think it's the only one trying to do what I want to do
+
+<velascou> yeah, I've been able to send messages, I just can't use them with webAudio
+
+<velascou> thus far creating a custom audioWorklet works, communicating with tauri works, but I can't put tauri stuff inside the AudioWorklet and
+that's the problem
+
+<> i don't know what tauri stuff means, the audioworklet talks to the main thread with its port
+
+<> if you want to load wasm in it you'd have to send it through the port and instantiate it there
+
+<velascou> Basically the function invoke that executes rust code and outputs the return value which is what I want
+
+<> yes that's not possible since the audioworklet is in its own thread, the rust code needs to be instantiated within the audioworklet's thread
+
+<velascou> Ok so... is there a possibility to do this in wasm?
+
+<velascou> Just to save me some time
+
+<velascou> Thanks a lot btw
+
+<velascou> To put it in simple terms I want to send an array from rust to react and output it as an audio
+
+<> yes if you want the synth to play with webaudio, the only way is to compile your rust code to wasm, fetch it in the main thread, and you can pass
+the Uint8Array with the wasm binary when you instantiate the audioworklet, then you pick it up from in the constructor's options.processorOptions parameter
+
+<velascou> I'm a little bit lost but I guess that's my lack of understanding of wasm
+
+<velascou> I guess if I ask you to send me a vanilla example it would be too much
+
+<> there are wasm examples in google code, let me check
+
+<> there are a few options there
+
+<velascou> Okay, ty very much for your help
+
+<> https://googlechromelabs.github.io/web-audio-samples/audio-worklet/
+
+<velascou> Ok that should be it, thanks a lot for your help <3
+
+<velascou> One last thing, do you know if this could work well with react?
+
+<> i mean yeah you should get the idea, one problem with those examples is they don't show how to send the binary, they simply compile the code
+directly to a .js file which they then import, so the binary is included encoded in base64
+<velascou> Well, I'll probably end up finding resources for that I hope
+
+<velascou> I guess wasm has a lot more support than tauri, specially for audio
+
+<> the point is, you need to compile your synth with target wasm_unknown_unknown in rust, then pass it to the AudioWorklet, and do the
+WebAssembly.instantiate(binary) in there
+<velascou> Okay, I'll take not
+
+<velascou> note
+
+<velascou> I'm a little concerned if this would still work with react tho
+
+<> the other bit of information is you need to copy the memory in and out of wasm, so you call the 'process' function in your rust code, it writes
+to some buffer 128 samples, it returns a pointer, you use it to copy the memory from wasm's memory to the audioworklet's processor outputs, you should see these in the examples i think
+
+<> react isn't related to that
+
+<> react deals with the dom in the main thread
+
+<> if you have visuals in realtime then react might not be the best framework
+
+<> the most imporant thing is to never allocate objects in the audioworklet, you never want the gc to get triggered in there
+
+<> or it will glitch
+
+<> or never free objects, you just allocate minimum stuff but not in the process loop
+
+<> anyways, let me know how it goes or if you get stuck anywhere!
+
+<velascou> Probably not but this was an excuse that I made to learn how to code stuff in react and now I have a somewhat visual programming UI. I'm
+doing it for a class project to flex a little bit and bc I did dsp and synths in the past so I wanted to mix both.
+<velascou> And honestly I've learnt to hate react hahaha
+
+<velascou> I'm switching to svelte or some other thing if I want to build a serious project
+
+<velascou> Again, ty so much for your help
+
+<> yeah i know the pain
+
+<> np
+
+<> good luck!
+
+(25/08/2023) Had been doing backend stuff all of this time, my hope is that the output of cpal goes straight into the output of the computer. If it's not possible webassembly might be my solution.
+I had a pretty hard time trying to implement a directed graph representing the audio flow. Not so much because of the graph but because of how I tried to implement the audio modules
+Tried to force HashMaps as they were going to make my code more legible but apparently rust doesn't like it that much. It all has to do with where certain stuff is allocated which is good to know but god was it a pain in the ass.
+Had to use &str with lifetimes instead of Strings which I find confusing as I don't want to force a specific lifetime on the strings but whatever. If it works it works. I'm able to call the same function from two different structs so it's basically done.
+Now all I have to do is polishing stuff. I honestly don't feel much satisfaction as I feel completely burntout. Might take a break after this and read a few books that I bought today or play some games. Who knows.
+I have to get all the regex and move it to js as doing it in the audio thread might be detrimental for performance.
+There are a bunch of TODOs that are going to be written in another file.

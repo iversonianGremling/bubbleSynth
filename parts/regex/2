@@ -1,0 +1,254 @@
+use regex::Regex;
+use std::{collections::HashMap, hash::Hash};
+
+#[derive(Debug)]
+enum AudioModule {
+    Oscillator,
+    ADSR,
+    LFO,
+    Sampler,
+    Filter,
+    Effect,
+    Input,
+    Output,
+    By,
+    None
+}
+
+enum ParamType<'a> {
+    ID(String),
+    Signal(f32),
+    Mod(&AudioModule)
+}
+trait AudioModuleTrait<'a> {
+    fn new(id: String) -> Self;
+    fn get_params(&'a self) -> HashMap<String, ParamType<'a>>;
+    fn set_params(&'a self, params: HashMap<String, ParamType<'a>>) -> ();
+}
+
+#[derive(Debug)]
+struct Oscillator {
+    id: String,
+    frequency: f32,
+    pub frequency_mod: AudioModule,
+    phase: f32,
+    pub phase_mod:  AudioModule,
+}
+impl AudioModuleTrait for Oscillator<'a> {
+    fn new(id: String) -> Self {
+        Oscillator {
+            id: id,
+            frequency: 0.0,
+            frequency_mod: &AudioModule::None,
+            phase: 0.0,
+            phase_mod: &AudioModule::None,
+        }
+    }
+
+    fn get_params(&'a self) -> HashMap<String, ParamType<'a>> {
+        let mut result = HashMap::new();
+        result.insert("id".to_string(), ParamType::ID("O".to_string()));
+        result
+    }
+    fn set_params(&'a self, params: HashMap<String, ParamType<'a>>) {
+        
+    }
+}
+#[derive(Debug)]
+struct ADSR {
+    id: String,
+    attack: f32,
+    decay: f32,
+    sustain: f32,
+    release: f32,
+}
+impl ADSR {
+    fn new(id: String) -> Self {
+        ADSR {
+            id: id,
+            attack: 0.0,
+            decay: 0.0,
+            sustain: 0.0,
+            release: 0.0,
+        }
+    }
+}
+
+#[derive(Debug)]
+struct LFO{
+    id: String
+}
+impl LFO {
+    fn new(id: String) -> Self {
+        LFO {
+            id: id
+        }
+    }
+}
+#[derive(Debug)]
+struct Sampler{}
+impl Sampler {
+    fn new() -> Self {
+        Sampler {}
+    }
+}
+#[derive(Debug)]
+struct Filter{
+    id: String
+}
+impl Filter {
+    fn new(id: String) -> Self {
+        Filter {
+            id: id
+        }
+    }
+}
+#[derive(Debug)]
+struct Effect{}
+impl Effect {
+    fn new() -> Self {
+        Effect {}
+    }
+}
+#[derive(Debug)]
+struct Input{}
+impl Input {
+    fn new() -> Self {
+        Input {}
+    }
+}
+#[derive(Debug)]
+struct Output{}
+impl Output {
+    fn new() -> Self {
+        Output {}
+    }
+}
+#[derive(Debug)]
+struct By{}
+impl By {
+    fn new() -> Self {
+        By {}
+    }
+}
+
+
+
+
+//NOTA DE DISEÑO GENERAL: Meter todos los audioModules en una "caja" y hacer que hagan tick todos a la vez, luego pasarse los valores entre ellos
+
+fn main() -> (){ // Hacer una funcion para update y otra para eliminar
+
+    let input_existing_modules: &str = "A1 O1 A2 L1 F1";
+    let input_number_of_modules = "A:2 L:1 F:1";
+    let input_connections_string: &str =
+    "A1 >f O1
+    A2 >p O1
+    L1 >f O2
+    O2 > F1
+    ";
+    let re_connections = Regex::new(r"([A-Z]\d+)\s[>]([a-z]?)\s([A-Z]\d+)").unwrap();
+    let mut results = vec![];
+    let mut module_ids_string = "".to_string();
+    let mut connections: HashMap<&str, Vec<String>> = HashMap::new(); // Initialize the HashMap
+    let mut modules: HashMap<&str, AudioModule>  = HashMap::new(); // Esto se rellena con la lista de módulos existentes,
+    let vector_existing_modules: Vec<&str> = input_existing_modules.split(' ').collect();
+    let mut number_of_modules = [0;8];
+    for module_id in vector_existing_modules.iter() {
+        //println!("Module ID: {}", module_id.chars().nth(0).unwrap());
+        //
+        let module_type = module_id.chars().nth(0).unwrap();
+        match module_type {
+            'O' => {
+                number_of_modules[0] += 1;
+                modules.insert(module_id, AudioModule::Oscillator(Oscillator::new(format!("O{}", number_of_modules[0]))));
+            },
+            'A' => {
+                number_of_modules[1] += 1;
+                modules.insert(module_id, AudioModule::ADSR(ADSR::new(format!("A{}", number_of_modules[1]))));
+            },
+            'L' => {
+                number_of_modules[2] += 1;
+                modules.insert(module_id, AudioModule::LFO(LFO::new(format!("L{}", number_of_modules[2]))));
+            },
+            //'S' => modules.insert(module_id, AudioModule::Sampler(Sampler::new())),
+            'F' => {
+                number_of_modules[4] += 1;
+                modules.insert(module_id, AudioModule::Filter(Filter::new(format!("F{}", number_of_modules[4]))));
+            }
+            //'E' => modules.insert(module_id, AudioModule::Effect(Effect::new())),
+            //'I' => modules.insert(module_id, AudioModule::Input(Input::new())),
+            //'U' => modules.insert(module_id, AudioModule::Output(Output::new())),
+            //'B' => modules.insert(module_id, AudioModule::By(By::new())),
+             _ => unreachable!()
+        };
+    }
+    // hacer un hashmap con un vector de tamanho
+    //el primer str representa el modulo que modifica a AudioModule, el segundo el parametro o si esta vacio implica que es su in
+
+
+    //OALSFEIUB
+    //Go through each right_op and their param(op) and keep adding their parents in a vector on a hashmap<right_op_ID, vec!(!format(op + left_op_ID))>
+
+    for caps in re_connections.captures_iter(input_connections_string) {
+        let left_op = caps.get(1).unwrap().as_str();
+        let op = caps.get(2).unwrap().as_str();
+        let right_op = caps.get(3).unwrap().as_str();
+
+        results.push((left_op, op, right_op));
+        module_ids_string = format!("{} {} {}", module_ids_string, left_op, right_op);
+
+        if let Some(vector_of_connections) = connections.get_mut(right_op) {
+            vector_of_connections.push(format!("{}{}", op, left_op));
+            let module_type = modules.get(right_op).unwrap();
+            let mut module;
+            let mut dummyHash: HashMap<String, ParamType<'a>>;
+            match module_type {
+                AudioModule::ADSR => {
+                    module = ADSR::new(right_op.to_string());
+                },
+                AudioModule::Oscillator => {
+
+                    module = Oscillator::new(right_op.to_string());
+                },
+                AudioModule::LFO => {
+
+                    module = LFO::new(right_op.to_string());
+                },
+                AudioModule::Filter => {
+
+                    module = Filter::new(right_op.to_string());
+                },
+                _ => {}
+            };
+            match right_op {
+                "O" => {
+                    let mod_module = modules.get(left_op).unwrap();
+                    match op {
+                        "f" => {
+                            dummyHash.insert("frequency_mod".to_string(), ParamType::Mod(mod_module));
+                            module.set_params(dummyHash);
+                        },
+                        "p" => {
+                            dummyHash.insert("phase_mod".to_string(), ParamType::Mod(mod_module));
+                            module.set_params(dummyHash);
+                        },
+                        _ => {}
+                    }
+                }
+                _ => unreachable!()
+            }
+        } else {
+            connections.insert(right_op, vec![format!("{}{}", op, left_op)]);
+        }
+
+        println!("{}", right_op.chars().nth(0).unwrap());
+
+
+    }
+    println!("Existing modules: {:?}", modules);
+    println!("Results: {:?}", results);
+    println!("Existing modules: {:?}", vector_existing_modules);
+    println!("Connections: {:?}", connections);
+}
+
